@@ -8,10 +8,12 @@ import AppProvider from "./context";
 function App() {
   return (
     <AppProvider>
-      <Hero />
-      <Navbar />
-      <Submenu />
-      <Sidebar />
+      <>
+        <Hero />
+        <Navbar />
+        <Submenu />
+        <Sidebar />
+      </>
     </AppProvider>
   );
 }

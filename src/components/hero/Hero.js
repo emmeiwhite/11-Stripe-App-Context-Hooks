@@ -1,6 +1,6 @@
 import React from "react";
 import phoneImg from "./../../images/phone.svg";
-import useGlobalContext from "./../../useGlobalContext";
+import { useGlobalContext } from "./../../context";
 const Hero = () => {
   const contextObject = useGlobalContext();
   console.log(contextObject);
