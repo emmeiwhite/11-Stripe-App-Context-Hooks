@@ -12,8 +12,8 @@ function App() {
       <main className="app-wrapper section">
         <Navbar />
         <Sidebar />
-        <Hero />
-        <Submenu />
+        {/* <Hero /> */}
+        {/* <Submenu /> */}
       </main>
     </AppProvider>
   );

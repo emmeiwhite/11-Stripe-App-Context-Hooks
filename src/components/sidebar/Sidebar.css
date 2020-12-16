@@ -1,0 +1,11 @@
+.sidebar {
+  border-radius: 0.5rem;
+  background-color: #fff;
+  position: absolute;
+  z-index: 10;
+  top: 1rem;
+  width: 90vw;
+  left: 5%;
+  right: 5%;
+  min-height: 90vh;
+}
