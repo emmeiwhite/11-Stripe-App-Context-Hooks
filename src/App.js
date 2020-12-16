@@ -4,16 +4,17 @@ import Hero from "./components/hero/Hero";
 import Sidebar from "./components/sidebar/Sidebar";
 import Submenu from "./components/submenu/Submenu";
 import AppProvider from "./context";
+import "./App.css";
 
 function App() {
   return (
     <AppProvider>
-      <>
-        <Hero />
+      <main className="app-wrapper section">
         <Navbar />
-        <Submenu />
         <Sidebar />
-      </>
+        <Hero />
+        <Submenu />
+      </main>
     </AppProvider>
   );
 }

@@ -1,9 +1,15 @@
 import React from "react";
-import logo from "./../../images/logo.svg";
+import { ReactComponent as Logo } from "./../../images/logo.svg";
 import { FaBars } from "react-icons/fa";
+import "./Navbar.css";
 
 const Navbar = () => {
-  return <h2>navbar component</h2>;
+  return (
+    <nav className="navbar">
+      <Logo />
+      <FaBars />
+    </nav>
+  );
 };
 
 export default Navbar;
