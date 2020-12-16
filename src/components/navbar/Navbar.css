@@ -1,5 +1,34 @@
-.navbar {
+.navbar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.nav-links,
+.signin-btn {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .signin-btn {
+    display: inline-block;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0 1rem;
+    color: #fff;
+    text-transform: capitalize;
+  }
+  .btn-sidebar-open {
+    display: none;
+  }
 }

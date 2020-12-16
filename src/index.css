@@ -96,6 +96,14 @@ p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-5);
 }
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  background: #000000;
+  color: #fff;
+}
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
