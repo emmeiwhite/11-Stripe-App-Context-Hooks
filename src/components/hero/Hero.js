@@ -7,9 +7,13 @@ import "./Hero.css";
 const Hero = () => {
   return (
     <section className="hero">
-      <div className="hero-center">
+      <div className="hero-center section">
         <article className="hero-info">
-          <h1>Payments infrastructure for the internet</h1>
+          <h1>
+            Payments <br />
+            infrastructure
+            <br /> for the internet
+          </h1>
           <p>
             Millions of businesses of all sizes—from startups to large
             enterprises—use Stripe’s software and APIs to accept payments, send

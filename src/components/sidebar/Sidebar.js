@@ -7,24 +7,41 @@ import "./Sidebar.css";
 const Sidebar = () => {
   const { isSidebarOpen, handleSidebar } = useGlobalContext();
   console.log(isSidebarOpen);
+
   return (
-    <>
-      {isSidebarOpen ? (
-        <div className="sidebar">
-          <h3>Sidebar Header</h3>
-          {sublinks.map((menu) => {
-            return (
-              <div key={menu.page}>
-                <p>{menu.page}</p>
-              </div>
-            );
-          })}
-          <FaTimes onClick={() => handleSidebar("close")} />
+    <aside
+      className={`${
+        isSidebarOpen ? "sidebar-wrapper show" : "sidebar-wrapper"
+      }`}
+    >
+      <div className="sidebar">
+        <div className="sidebar-close">
+          <FaTimes
+            onClick={() => handleSidebar("close")}
+            className="fa-times"
+          />
         </div>
-      ) : (
-        ""
-      )}
-    </>
+        {sublinks.map((menu) => {
+          const { page, links } = menu;
+          return (
+            <div key={page} className="sidebar-links">
+              <h3>{page}</h3>
+              <div className="links-wrapper">
+                {links.map((link) => {
+                  const { label, icon } = link;
+                  return (
+                    <div className="link" key={label}>
+                      <span className="link-label">{icon}</span>
+                      <span>{label}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </aside>
   );
 };
 

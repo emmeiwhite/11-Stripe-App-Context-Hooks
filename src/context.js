@@ -5,7 +5,7 @@ export const AppContext = React.createContext();
 
 const AppProvider = (props) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
+  const [isSubmenuOpen, setIsSubmenuOpen] = useState(true);
 
   const handleSidebar = (value) => {
     if (value === "close") {
