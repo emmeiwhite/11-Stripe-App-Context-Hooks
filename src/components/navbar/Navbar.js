@@ -8,7 +8,7 @@ import sublinks from "./../../data";
 const Navbar = () => {
   const { handleSidebar } = useGlobalContext();
   return (
-    <nav className="navbar">
+    <nav className="navbar section">
       <div className="navbar-header">
         <Logo />
         <button

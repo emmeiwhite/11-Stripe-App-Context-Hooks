@@ -9,10 +9,10 @@ import "./App.css";
 function App() {
   return (
     <AppProvider>
-      <main className="app-wrapper section">
+      <main className="app-wrapper">
         <Navbar />
         <Sidebar />
-        {/* <Hero /> */}
+        <Hero />
         {/* <Submenu /> */}
       </main>
     </AppProvider>
