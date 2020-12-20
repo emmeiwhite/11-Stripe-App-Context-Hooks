@@ -1,13 +1,11 @@
 .submenu {
-  min-height: 100px;
   min-width: 200px;
+  min-height: 50px;
   background-color: #ffffff;
   transition: all 0.3s ease-in-out;
   display: none;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   position: absolute;
-  top: 4rem;
-  left: 50%;
 }
 .submenu::before {
   content: "";

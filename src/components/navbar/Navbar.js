@@ -15,10 +15,11 @@ const Navbar = () => {
     const tempBtn = e.target.getBoundingClientRect();
 
     const center = (tempBtn.left + tempBtn.right) / 2;
-    const bottom = tempBtn.bottom - 3;
+    const bottom = tempBtn.bottom;
 
     handleSubmenu("open", mainLink, { center, bottom });
   };
+
   return (
     <nav className="navbar section">
       <div className="navbar-header">

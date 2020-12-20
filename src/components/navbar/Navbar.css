@@ -25,10 +25,11 @@
   }
 
   .nav-links li {
-    margin: 0 1rem;
+    margin: 0 2.5rem;
     color: #fff;
     text-transform: capitalize;
     cursor: pointer;
+    font-weight: 600;
   }
 
   .btn-sidebar-open {
