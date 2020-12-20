@@ -21,13 +21,16 @@
 
   .nav-links {
     display: flex;
+    position: relative;
   }
 
   .nav-links li {
     margin: 0 1rem;
     color: #fff;
     text-transform: capitalize;
+    cursor: pointer;
   }
+
   .btn-sidebar-open {
     display: none;
   }

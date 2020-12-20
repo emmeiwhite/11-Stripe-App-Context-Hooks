@@ -5,7 +5,8 @@ export const AppContext = React.createContext();
 
 const AppProvider = (props) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isSubmenuOpen, setIsSubmenuOpen] = useState(true);
+  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
+  const [location, setLocation] = useState({});
 
   const handleSidebar = (value) => {
     if (value === "close") {
@@ -16,17 +17,26 @@ const AppProvider = (props) => {
     }
   };
 
-  const handleSubmenu = (value) => {
+  const handleSubmenu = (value, currentLink, coordinates) => {
     if (value === "close") {
       setIsSubmenuOpen(false);
     }
     if (value === "open") {
+      console.log(currentLink);
       setIsSubmenuOpen(true);
+      setLocation(coordinates);
+      console.log(location);
     }
   };
   return (
     <AppContext.Provider
-      value={{ isSidebarOpen, isSubmenuOpen, handleSidebar, handleSubmenu }}
+      value={{
+        isSidebarOpen,
+        isSubmenuOpen,
+        handleSidebar,
+        handleSubmenu,
+        location,
+      }}
     >
       {props.children}
     </AppContext.Provider>

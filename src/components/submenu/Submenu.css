@@ -14,13 +14,16 @@
   display: block;
   height: 10px;
   width: 10px;
+  background: #ffffff;
   position: absolute;
   top: -5px;
   left: 50%;
   transform: translateX(-50%) rotate(45deg);
-  background: #ffffff;
 }
-.submenu.show {
-  display: block;
-  transform: translate(20px);
+
+@media (min-width: 800px) {
+  .submenu.show {
+    display: block;
+    transform: translate(-50%);
+  }
 }

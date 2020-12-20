@@ -4,9 +4,21 @@ import { FaBars } from "react-icons/fa";
 import "./Navbar.css";
 import { useGlobalContext } from "../../context";
 import sublinks from "./../../data";
+import Submenu from "../submenu/Submenu";
 
 const Navbar = () => {
-  const { handleSidebar } = useGlobalContext();
+  const { handleSidebar, handleSubmenu, isSubmenuOpen } = useGlobalContext();
+
+  const displaySubmenu = (e) => {
+    // We need two things: 1) event.target.textContent and 2)location of the item using getBoundingClientRect()
+    const mainLink = e.target.textContent;
+    const tempBtn = e.target.getBoundingClientRect();
+
+    const center = (tempBtn.left + tempBtn.right) / 2;
+    const bottom = tempBtn.bottom - 3;
+
+    handleSubmenu("open", mainLink, { center, bottom });
+  };
   return (
     <nav className="navbar section">
       <div className="navbar-header">
@@ -24,7 +36,7 @@ const Navbar = () => {
       <ul className="nav-links">
         {sublinks.map((link) => (
           <li>
-            <span className="link" key={link.page}>
+            <span className="link" key={link.page} onMouseOver={displaySubmenu}>
               {link.page}
             </span>
           </li>
