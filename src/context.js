@@ -7,7 +7,12 @@ const AppProvider = (props) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const [location, setLocation] = useState({});
-
+  /* --- SubMenu Data --- */
+  const [page, links] = useState({
+    text: "",
+    links: [],
+  });
+  /* --- End ---*/
   const handleSidebar = (value) => {
     if (value === "close") {
       setIsSidebarOpen(false);
@@ -22,10 +27,10 @@ const AppProvider = (props) => {
       setIsSubmenuOpen(false);
     }
     if (value === "open") {
-      console.log(currentLink);
       setIsSubmenuOpen(true);
       setLocation(coordinates);
-      console.log(location);
+
+      // Setting the page and links state
     }
   };
   return (
