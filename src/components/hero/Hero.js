@@ -5,8 +5,14 @@ import { useGlobalContext } from "./../../context";
 import "./Hero.css";
 
 const Hero = () => {
+  const { handleSubmenu } = useGlobalContext();
   return (
-    <section className="hero">
+    <section
+      className="hero"
+      onMouseOver={() => {
+        handleSubmenu("close", null, null);
+      }}
+    >
       <div className="hero-center section">
         <article className="hero-info">
           <h1>

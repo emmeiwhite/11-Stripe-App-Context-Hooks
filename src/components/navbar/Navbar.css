@@ -25,13 +25,16 @@
   }
 
   .nav-links li {
-    margin: 0 2.5rem;
     color: #fff;
     text-transform: capitalize;
     cursor: pointer;
     font-weight: 600;
   }
 
+  .nav-links .link {
+    padding: 0.5rem 2rem;
+    font-size: 1.2rem;
+  }
   .btn-sidebar-open {
     display: none;
   }

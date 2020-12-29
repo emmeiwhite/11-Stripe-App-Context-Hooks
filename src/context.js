@@ -8,7 +8,7 @@ const AppProvider = (props) => {
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const [location, setLocation] = useState({});
   /* --- SubMenu Data --- */
-  const [page, links] = useState({
+  const [page, setPage] = useState({
     text: "",
     links: [],
   });
@@ -30,7 +30,10 @@ const AppProvider = (props) => {
       setIsSubmenuOpen(true);
       setLocation(coordinates);
 
-      // Setting the page and links state
+      // Setting the page and links state for it to be accessed in the submenu component
+
+      const links = sublinks.find((link) => link.page === currentLink);
+      setPage(links);
     }
   };
   return (
@@ -41,6 +44,7 @@ const AppProvider = (props) => {
         handleSidebar,
         handleSubmenu,
         location,
+        page,
       }}
     >
       {props.children}

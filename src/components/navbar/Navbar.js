@@ -7,7 +7,7 @@ import sublinks from "./../../data";
 import Submenu from "../submenu/Submenu";
 
 const Navbar = () => {
-  const { handleSidebar, handleSubmenu, isSubmenuOpen } = useGlobalContext();
+  const { handleSidebar, handleSubmenu } = useGlobalContext();
 
   const displaySubmenu = (e) => {
     // We need two things: 1) event.target.textContent and 2)location of the item using getBoundingClientRect()
@@ -20,8 +20,13 @@ const Navbar = () => {
     handleSubmenu("open", mainLink, { center, bottom });
   };
 
+  const handleSubMenuClose = (e) => {
+    if (!e.target.classList.contains("link")) {
+      handleSubmenu("close", null, null);
+    }
+  };
   return (
-    <nav className="navbar section">
+    <nav className="navbar section" onMouseOver={handleSubMenuClose}>
       <div className="navbar-header">
         <Logo />
         <button
